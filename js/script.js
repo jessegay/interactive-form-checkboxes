@@ -20,7 +20,7 @@
 
 /* Variable to store all the checkboxes - You will use this in the event listener below to create a loop */
 const checkboxes = document.querySelectorAll('.options input');
-
+//console.log(checkboxes.length);
 
 /**
  * Event listener for checkboxes
@@ -46,6 +46,7 @@ for (let i = 0; i < checkboxes.length; i ++) {
 
 
 }
+
   // 5) In the loop, create a variable named `checkboxType` to store the `data-type` attribute of the `checkboxes[i]` in the loop's current iteration
   
   // 6) Create an `if` statement to check which items to disable/enable.  Two conditions need to be checked: 
