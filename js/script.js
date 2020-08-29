@@ -67,6 +67,7 @@ for (let i = 0; i < checkboxes.length; i ++) {
   //    - So check that the clicked checkbox is not the checkbox in the loop's current iteration
   //    - That will look something like this - `(clickedType === checkboxType && clicked !== checkboxes[i])`
 
+  //    FIXME: I think this should be worded more like "These 2 checks can be accomplished with a statement like ...." Also, why the - at the beginning of each line? It's consistent and makes it confusing to know which step they're talking about.
   // 7) In the `if` statement, create an `if/else` statement to check one condition:
   //    - If the clicked checkbox is checked or unchecked
   //    - That will look something like this - `(clicked.checked)`; 
