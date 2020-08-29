@@ -43,12 +43,14 @@ console.log(clicked);
 for (let i = 0; i < checkboxes.length; i ++) {
   let checkboxType = checkboxes[i].getAttribute('data-type');
   console.log(checkboxType);
-  // 6) disable all the ones of the same type that aren't the one that was just clicked
+  // 6) 
   if (clickedType === checkboxType && clicked !== checkboxes[i]) {
   // 7)
     if (clicked.checked) {
+  // 8)
       checkboxes[i].disabled = true;
     } else {
+  // 9)    
       checkboxes[i].disabled = false;
     } 
   }
