@@ -31,19 +31,27 @@ document.querySelector('.options').addEventListener('change', (e) => {
 
 // 1) Create a variable named clicked to store the checkbox input that was just clicked
 //    - `e.target` will be helpful here
-const clicked = e.target.value;
+const clicked = e.target;
 
 // 2) Create a variable named clickedType to store the `data-type` attribute of the checkbox that was just clicked
 //    - the `getAttribute` method will be helpful here
 const clickedType = e.target.getAttribute('data-type');
 // 3) Log out the two variables you just created to confirm their values
 console.log(clicked);
-console.log(clickedType);
+//console.log(clickedType);
 // 4) Use the `checkboxes` variable that was created for you above, and a `for` loop to iterate over all the checkbox input elements
 for (let i = 0; i < checkboxes.length; i ++) {
   let checkboxType = checkboxes[i].getAttribute('data-type');
   console.log(checkboxType);
-
+  // 6) disable all the ones of the same type that aren't the one that was just clicked
+  if (clickedType === checkboxType && clicked !== checkboxes[i]) {
+  // 7)
+    if (clicked.checked) {
+      checkboxes[i].disabled = true;
+    } else {
+      checkboxes[i].disabled = false;
+    } 
+  }
 
 }
 
@@ -59,7 +67,7 @@ for (let i = 0; i < checkboxes.length; i ++) {
 
   // 7) In the `if` statement, create an `if/else` statement to check one condition:
   //    - If the clicked checkbox is checked or unchecked
-  //    - That will look something like this - `(clicked.checked)`;
+  //    - That will look something like this - `(clicked.checked)`; 
   // 8) If the `clicked` checkbox is `checked`, use dot notation to set the `disabled` property of `checkboxes[i]` to true
   // 9) Else, set the `disabled` property of `checkboxes[i]` to false
 
